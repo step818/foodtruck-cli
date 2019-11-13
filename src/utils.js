@@ -30,6 +30,5 @@ export async function queryFoodTrucks(apiKey) {
 
 function getApiUrl(baseUri, apiKey) {
   let url = baseUri + `?$$app_token=${apiKey.trim()}`;
-  // url += `&$$app_token=${apiKey.trim()}`;
   return url;
 }

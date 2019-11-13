@@ -6,7 +6,7 @@ const menus = {
     
     ${chalk.blueBright('version')} ........ show package version
     ${chalk.blueBright('help')} ........... show help menu for a command
-    ${chalk.blueBright('config')} ......... set API token after command with ( -k=<APIKEY> )
+    ${chalk.blueBright('config')} ......... set API token after command with < -k=<APIKEY> >
     ${chalk.blueBright('now')} ............ show food trucks open now
     ${chalk.blueBright('next')} ........... show next 10 food trucks if list exceeds 10
     `,
