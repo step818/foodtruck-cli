@@ -26,14 +26,17 @@ export async function cli(argsArray) {
       break;
     
     case 'config':
-        console.log("hi");
       configure(args);
-      
+      console.log("token accepted");
       break;
 
     case 'now':
       now(args);
       break;
+
+      case 'next':
+        next(args);
+        break;
 
     default:
       console.error(`"${cmd}" is not a valid command!`);
