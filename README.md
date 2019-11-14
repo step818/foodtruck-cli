@@ -10,9 +10,29 @@ This console program is designed to take particular commands from the user. The 
 
 ## Setup/Installation Requirements
 
-Open the folder in your favorite code editor
+### Pre - Installation Requirements
 
-Then in your terminal or command line, `cd` to the  `foodtruck-cli` folder.
+You will need to install Node & npm on your computer if you haven't already.
+
+Go to https://nodejs.org/en/download and follow instructions for either Windows, Mac, or Linux depending on what platform you are using.
+
+Open your computer’s command prompt (Windows) or terminal (macOS/Linux).
+
+Just type `node -v` in the command line and hit Enter to make sure Node was installed.
+The version of Node you downloaded will appear, something like `v12.13.0`.
+
+Then type `npm -v` in the command line and hit Enter to make sure NPM was installed.
+The version of NPM you downloaded will appear, something like `6.12.0`.
+
+
+
+Drag or copy the "foodtruck-cli" folder to your desktop.
+
+
+
+Open your terminal and `cd` to the `foodtruck-cli` project directory.
+
+
 
 Once inside the root directory, use the command `$ show-open-food-trucks --help`,
 to see a menu of valid commands.

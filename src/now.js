@@ -2,7 +2,7 @@ import Conf from 'conf';
 import Table from 'cli-table3';
 import { configKey } from './configure';
 import { validateApiKey, queryFoodTrucks } from './utils';
-import { next } from './next';
+// import { next } from './next';
 
 export async function now(args) {
   const config = new Conf().get(configKey);
@@ -18,7 +18,6 @@ export async function now(args) {
     colWidths: [15, 18, 8, 7, 7],
     wordWrap: true
   });
-  // const sortedList = [];
 // create filter for adding food trucks at current DATE & TIME
   let current = new Date();
   let hours = addZero(current.getHours());
@@ -53,11 +52,13 @@ export async function now(args) {
   }
   table.sort();
 
-  if (table.length > 10) {
-    next(table);
-  }
+  // if (table.length > 10) {
+  //   export const table = table;
+  // }
 
   console.log("There are a total of " + table.length + " food trucks open now.");
   let amount = 10;
-  console.log(table.slice(0,10).toString());
+  console.log(table.slice(0, amount).toString());
+// wait for user to cmd to view next 10 items
+//
 }

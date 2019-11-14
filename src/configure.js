@@ -8,7 +8,8 @@ export async function configure(args) {
   let currentConfigObject = config.get(configKey);
   currentConfigObject = currentConfigObject || {};
 
-  let apiKey = args.apiKey || args.k;
+  let apiKey = args.apiKey ? args.apiKey : args.k;
+  // let apiKey = args.apiKey || args.k;
   if (!apiKey) {
     apiKey = currentConfigObject.apiKey;
   }
