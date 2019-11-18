@@ -1,6 +1,12 @@
 # _Food Truck CLI_
 
-#### By _**Stephen Trewick**_
+## Usages
+
+` node . `
+` node . --help `
+` node . --version `
+` node . config -k=<ApiToken> `
+` node . now `
 
 ## Description
 
@@ -9,7 +15,7 @@ This console program is designed to take particular commands from the user. The 
 ----------
 
 ## Setup/Installation Requirements
-
+----------
 ### Pre - Installation Requirements
 
 You will need to install Node & npm on your computer if you haven't already.
@@ -24,24 +30,28 @@ The version of Node you downloaded will appear, something like `v12.13.0`.
 Then type `npm -v` in the command line and hit Enter to make sure NPM was installed.
 The version of NPM you downloaded will appear, something like `6.12.0`.
 
-
+### Opening the Food Truck CLI Program
 
 Drag or copy the "foodtruck-cli" folder to your desktop.
 
-
-
 Open your terminal and `cd` to the `foodtruck-cli` project directory.
 
+Once inside the root directory, to build locally, `npm install` and `npm link` 
 
-
-Once inside the root directory, use the command `$ show-open-food-trucks --help`,
+Once inside the root directory, use the command `show-open-food-trucks --help`,
 to see a menu of valid commands.
+
+If this returns an error, ` node . --help ` or `node . -h` will return the correct help menu to the console. The `npm link` command isn't recognized by your terminal, since that is the command that allows the custom `show-open-food-trucks` to work. 
 
 You will need to apply your own API token, instructions on how to do so follow:
 
+If the `show-open-food-trucks -h` command is not recognized, then use ` node . config -k=<ApiToken> ` but insert your Api token in place of the `<ApiToken>`.  
+
 Use the ` show-open-food-trucks config -k=<ApiToken> ` command with your API token to configure the program to gain access to the DataSF API.
 
-Next, use the ` show-open-food-trucks now ` command to have a table with food truck names and locations be displayed.
+This will safely save your Api Token for use of the CLI program so that you won't have to configure your way through the back end of the code. And your token will not be visible to any one else either. 
+
+Next, use the ( ` node . now ` ) or ` show-open-food-trucks now ` command to have a table with food truck names and locations be displayed.
 
 Enjoy!
 
@@ -50,4 +60,4 @@ _Node.js, VSCode, Windows 10.1, powershell, DataSF Socrata
 
 ### License
 *Licensed under the GPL License*
-Copyright (c) 2019 **_Stephen Trewick_**
+Copyright (c) 2019 **__**
