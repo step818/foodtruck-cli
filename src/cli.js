@@ -5,8 +5,10 @@ import { configure } from './configure';
 import { now } from './now';
 import { next } from './next';
 
+
 export async function cli(argsArray) {
   const args = minimist(argsArray.slice(2));
+  
   let cmd = args._[0] || 'help';
 // if flag is --version or -v , gets npm version
   if (args.version || args.v) {

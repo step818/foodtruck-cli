@@ -39,10 +39,8 @@ export async function now(args) {
     if (data[key].dayorder == current.getDay()
         && data[key].start24 <= clock
         && data[key].end24 >= clock) {
-// push first ten items that meet criteria into a table
-    
-        // make a list first, then push it in to a table, so that way
-        // each table has its own heading
+// make a list first, then push it in to a table, so that way
+// each table has its own heading
       temp.push({
         id: key,
         applicant: data[key].applicant,
@@ -51,32 +49,36 @@ export async function now(args) {
         start24: data[key].start24,
         end24: data[key].end24
       });
-      // temp.push([
-      //   data[i].applicant,
-      //   data[i].location,
-      //   data[i].dayofweekstr,
-      //   data[i].start24,
-      //   data[i].end24
-      // ]);
     }
   }
-  
+// Sort the temporary array alphabetically
   temp.sort((a,b) => a.applicant.localeCompare(b.applicant));
 
-  // if (table.length > 10) {
-  //   export const table = table;
-  // }
   console.log("There are a total of " + temp.length + " food trucks open now.");
-  let amount = 10;
-  for (let i = 0; i <10; i++) {
-    table.push([
-      temp[i].applicant,
-      temp[i].location,
-      temp[i].dayofweekstr,
-      temp[i].start24,
-      temp[i].end24
-    ]);
+  if (temp.length >= 10) {
+    let amount = 10;
+    for (let i = 0; i < amount; i++) {
+      table.push([
+        temp[i].applicant,
+        temp[i].location,
+        temp[i].dayofweekstr,
+        temp[i].start24,
+        temp[i].end24
+      ]);
+    }
   }
+  else if (temp.length < 10) {
+    for (let i = 0; i < temp.length; i++) {
+      table.push([
+        temp[i].applicant,
+        temp[i].location,
+        temp[i].dayofweekstr,
+        temp[i].start24,
+        temp[i].end24
+      ]);
+    }
+  } 
+  
   console.log(table.toString());
 // wait for user to cmd to view next 10 items
 //
