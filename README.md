@@ -20,6 +20,8 @@ This console program is designed to take particular commands from the user. The 
 
 You will need to install Node & npm on your computer if you haven't already.
 
+`npm install`
+
 Go to https://nodejs.org/en/download and follow instructions for either Windows, Mac, or Linux depending on what platform you are using.
 
 Open your computer’s command prompt (Windows) or terminal (macOS/Linux).
@@ -60,4 +62,4 @@ _Node.js, VSCode, Windows 10.1, powershell, DataSF Socrata
 
 ### License
 *Licensed under the GPL License*
-Copyright (c) 2019 **__**
+Copyright (c) 2019 **_Stephen Trewick_**
